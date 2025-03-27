@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellington Farm | Cattle & Sheep Sales | Creighton, KZN</title>
+    <meta name="description" content="Ellington Farm in Creighton, KZN offers premium beef cattle and sheep with delivery services available. Quality livestock direct from our South African farm.">
+    <meta name="keywords" content="">
+    <meta name="geo.region" content="SA">
+    <meta name="geo.placename" content="South Africa">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 50px;  /* Adjust size as needed */
+            height: 50px; /* Maintain aspect ratio */
+            border-radius: 50%; /* Optional: make logo circular */
+            margin-right: 15px;
+            object-fit: cover; /* Ensures image fills without distortion */
+        }
+
+        .logo span {
+            color: #F2C94C; /* Optional: keep yellow accent if desired */
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .nav-links a:hover {
+            color: #F2C94C; /* Yellow accent color */
+        }
+
+        .nav-links a.active {
+            color: #F2C94C; /* Yellow accent color */
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #F2C94C; /* Yellow accent color */
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero section */
+        .hero {
+            height: 80vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/484557215_962272966055993_8219850403350660359_n.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #F2C94C; /* Yellow accent color */
+            color: #333;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e6b93b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Features section */
+        .features {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            background-color: rgba(242, 201, 76, 0.2); /* Light yellow */
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            color: #F2C94C; /* Yellow accent color */
+            font-size: 2rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        /* Products section */
+        .products {
+            background-color: #f1f1f1;
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section-header p {
+            color: #666;
+        }
+
+        .product-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            padding: 12px 25px;
+            margin: 5px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background-color: #F2C94C; /* Yellow accent color */
+            color: #333;
+        }
+
+        .product-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .product-button {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #F2C94C; /* Yellow accent color */
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .product-button:hover {
+            background-color: #e6b93b;
+        }
+
+        /* Delivery Calculator Section */
+        .delivery-calculator {
+            background-color: #f1f1f1;
+            padding: 80px 20px;
+        }
+
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .calculator-form {
+            margin-top: 30px;
+        }
+
+        #deliveryEstimate {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(242, 201, 76, 0.1);
+            border-left: 4px solid #F2C94C;
+            display: none;
+        }
+
+        #deliveryEstimate h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Product row styles for calculator */
+        .product-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .product-row select, .product-row input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex-grow: 1;
+        }
+
+        .product-row input {
+            max-width: 80px;
+        }
+
+        .remove-product-row {
+            background: none;
+            border: none;
+            color: #ff4d4d;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 5px;
+        }
+
+        /* Quote actions */
+        .quote-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .quote-actions button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        #copyQuote {
+            background-color: #f1f1f1;
+        }
+
+        #emailQuote {
+            background-color: #F2C94C;
+        }
+
+        /* Contact section */
+        .contact {
+            background-color: #f8f8f8;
+            padding: 80px 0;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 50px;
+        }
+
+        .contact-info {
+            padding: 30px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(242, 201, 76, 0.2); /* Light yellow */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: #F2C94C; /* Yellow accent color */
+        }
+
+        .contact-detail p {
+            color: #666;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #F2C94C; /* Yellow accent color */
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #e6b93b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: #F2C94C; /* Yellow accent color */
+        }
+
+        .footer-about p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #F2C94C; /* Yellow accent color */
+            color: #333;
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #F2C94C; /* Yellow accent color */
+        }
+
+        .copyright {
+            text-align: center;
+            color: #aaa;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+
+            .product-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tab-button {
+                width: 80%;
+                margin: 5px 0;
+            }
+
+            .product-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .product-row input {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">
+    <img src="images/309347711_401127105503918_7622046856155154688_n.jpg" alt="Ellington Farm Logo" loading="lazy">
+    <span>Ellington Farm</span>
+</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Quality Livestock from<br>Ellington Farm</h1>
+        <p>Premium beef cattle and sheep raised in the beautiful countryside of Creighton, KwaZulu-Natal. We offer delivery services throughout the region.</p>
+        <a href="contact.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🐄</div>
+            <h3>Premium Cattle</h3>
+            <p>We specialize in high-quality beef cattle breeds including Angus, Hereford, and Brahman, bred for optimal meat production and adaptability.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🐑</div>
+            <h3>Quality Sheep</h3>
+            <p>Our sheep are raised with care, providing excellent meat quality and wool. We offer various breeds to meet different farming needs.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚚</div>
+            <h3>Delivery Available</h3>
+            <p>We provide reliable transport services for all livestock purchases, ensuring safe and stress-free delivery to your farm.</p>
+        </div>
+    </section>
+
+    <!-- Updated Products Section -->
+    <section class="products" id="products">
+        <div class="section-header">
+            <h2>Our Offerings</h2>
+            <p>Explore our range of livestock, hay, and transportation services tailored to meet your farming needs.</p>
+        </div>
+
+        <div class="product-tabs">
+            <button class="tab-button active" data-tab="cattle">Cattle</button>
+            <button class="tab-button" data-tab="sheep">Sheep</button>
+            <button class="tab-button" data-tab="hay">Hay Bales</button>
+            <button class="tab-button" data-tab="transport">Transport</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Cattle Products (Default View) -->
+            <div class="product-card" data-category="cattle">
+                <div class="product-image" style="background-image: url('images/bonsmara.png')"></div>
+                <div class="product-info">
+                    <h3>Bonsmara Cattle</h3>
+                    <p>Known for excellent marbling and tenderness, our Angus cattle thrive in the South African climate.</p>
+                </div>
+            </div>
+            <div class="product-card" data-category="cattle">
+                <div class="product-image" style="background-image: url('images/482062801_958417113108245_3158894003114658268_n.jpg')"></div>
+                <div class="product-info">
+                    <h3>Nguni Cattle</h3>
+                    <p>Hardy and adaptable, Herefords produce excellent beef with good feed conversion efficiency.</p>
+                    <a href="#quote" class="product-button">Request Quote</a>
+                </div>
+            </div>
+            <div class="product-card" data-category="cattle">
+                <div class="product-image" style="background-image: url('images/brahman.jpg')"></div>
+                <div class="product-info">
+                    <h3>Brahman Cattle</h3>
+                    <p>Heat and disease resistant, Brahmans are perfectly adapted to the KZN climate and conditions.</p>
+                </div>
+            </div>
+            <div class="product-card" data-category="cattle">
+                <div class="product-image" style="background-image: url('images/470170674_1095479932025358_1166187987941446594_n.jpg')"></div>
+                <div class="product-info">
+                    <h3>Heifers</h3>
+                    <p>Heat and disease resistant.</p>
+                </div>
+            </div>
+            <div class="product-card" data-category="cattle">
+                <div class="product-image" style="background-image: url('images/120799046_184526866454007_4072318223786994882_n.jpg')"></div>
+                <div class="product-info">
+                    <h3>Weined Calves</h3>
+                    <p>Heat and disease resistant, Brahmans are perfectly adapted to the KZN climate and conditions.</p>
+                </div>
+            </div>
+
+            <!-- Sheep Products -->
+            <div class="product-card" data-category="sheep" style="display: none;">
+                <div class="product-image" style="background-image: url('images/95097551_142173274022700_7715399505876615168_n.jpg')"></div>
+                <div class="product-info">
+                    <h3>Dorper Sheep</h3>
+                    <p>Excellent meat sheep known for their hardiness and high-quality meat production.</p>
+                    <a href="#quote" class="product-button">Request Quote</a>
+                </div>
+            </div>
+
+            <!-- Hay Products -->
+            <div class="product-card" data-category="hay" style="display: none;">
+                <div class="product-image" style="background-image: url('images/187950423_304746447765381_8423100454102761424_n.jpg')"></div>
+                <div class="product-info">
+                    <h3>Hay</h3>
+                    <p>High-protein hay perfect for dairy cattle, horses, and other livestock requiring quality forage.</p>
+                    <a href="#quote" class="product-button">Request Quote</a>
+                </div>
+            </div>
+            <div class="product-card" data-category="hay" style="display: none;">
+                <div class="product-image" style="background-image: url('images/486329492_970872491862707_6160727074379241913_n.jpg')"></div>
+                <div class="product-info">
+                    <h3>Mini Hay</h3>
+                    <p>Excellent quality hay with good nutritional value, suitable for all livestock.</p>
+                    <a href="#quote" class="product-button">Request Quote</a>
+                </div>
+            </div>
+
+            <!-- Transport Services -->
+            <div class="product-card" data-category="transport" style="display: none;">
+                <div class="product-image" style="background-image: url('images/470154399_1095992775307407_4056095284902481240_n (1).jpg')"></div>
+                <div class="product-info">
+                    <h3>Livestock Transport</h3>
+                    <p>Professional livestock transportation services with specialized vehicles for animal safety.</p>
+                </div>
+            </div>
+            <div class="product-card" data-category="transport" style="display: none;">
+                <div class="product-image" style="background-image: url('images/482240660_962272706056019_4305608556234607063_n.jpg')"></div>
+                <div class="product-info">
+                    <h3>Livestock Transport</h3>
+                    <p>Professional livestock transportation services with specialized vehicles for animal safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Calculator Section -->
+    <section class="delivery-calculator" id="delivery-calculator">
+        <div class="section-header">
+            <h2>Delivery Price Calculator</h2>
+            <p>Estimate your delivery cost based on animal type and quantity</p>
+        </div>
+        <div class="calculator-container">
+            <form id="deliveryCalculatorForm" class="calculator-form">
+                <div id="productContainer">
+                    <div class="product-row">
+                        <select class="product-select" required>
+                            <option value="">Select Product</option>
+                            <option value="bulls">Bulls (R3,500)</option>
+                            <option value="heifers">Heifers (R3,800)</option>
+                            <option value="bonsmara">Bonsmara Heifers (R9,000)</option>
+                            <option value="sheep">Sheep (R500)</option>
+                            <option value="hay-bales">Hay Bales (R250)</option>
+                        </select>
+                        <input type="number" class="product-quantity" placeholder="Qty" min="1" max="50" required>
+                        <button type="button" class="remove-product-row">✖</button>
+                    </div>
+                </div>
+                <button type="button" id="addProductRow" class="submit-button" style="margin-top: 10px;">+ Add Another Product</button>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="deliveryLocation">Delivery Location</label>
+                    <select id="deliveryLocation" required>
+                        <option value="">Select Location</option>
+                        <option value="local">Local (Creighton Area) - R1,000</option>
+                        <option value="Ixopo">Ixopo  - R1,500</option>
+                        <option value="Pietermaritzburg">Pietermaritzburg - R3,000</option>
+                        <option value="Port Shepstone">Port Shepstone - R3,500+</option>
+                        <option value="Durban">Durban - R4,000+</option>
+                        <option value="Stanger">Stanger - R5,000+</option>
+                        <option value="Newcastle">Newcastle - R6,000+</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Calculate Estimate</button>
+            </form>
+            <div id="deliveryEstimate">
+                <h3>Estimated Delivery Quote</h3>
+                <div id="estimateResult"></div>
+                <div class="quote-disclaimer">
+                    <p><strong>Disclaimer:</strong> This is a preliminary estimate and may vary. Factors affecting final price include:</p>
+                    <ul>
+                        <li>Exact delivery distance</li>
+                        <li>Road conditions</li>
+                        <li>Special handling requirements</li>
+                        <li>Current market rates</li>
+                    </ul>
+                    <div class="quote-actions">
+                        <button id="copyQuote" class="submit-button">Copy Quote</button>
+                        <button id="emailQuote" class="submit-button">Email Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">Ellington <span>Farm</span></div>
+                <p>Premium livestock farm specializing in quality beef cattle and sheep with delivery services available throughout KwaZulu-Natal.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Livestock</h4>
+                <ul>
+                    <li>Beef Cattle</a></li>
+                    <li>Weaned Calves</a></li>
+                    <li>Sheep</a></li>
+                    <li>Transport Services</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Ellington Farm. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+// Product Grid Filtering with complete functionality
+const tabButtons = document.querySelectorAll('.tab-button');
+const productGrid = document.getElementById('productGrid');
+
+function updateProductGrid(category) {
+    const productCards = document.querySelectorAll('.product-card');
+
+    // Remove active class from all buttons
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+    // Add active class to clicked button
+    const activeButton = Array.from(tabButtons).find(btn => btn.getAttribute('data-tab') === category);
+    if (activeButton) {
+        activeButton.classList.add('active');
+    }
+
+    // Show/hide product cards
+    productCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        card.style.display = cardCategory === category ? 'block' : 'none';
+    });
+}
+
+// Tab button event listeners
+tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const category = this.getAttribute('data-tab');
+        updateProductGrid(category);
+    });
+});
+
+// Initial load with cattle products
+updateProductGrid('cattle');
+
+// Comprehensive Delivery Calculator
+const PRODUCT_PRICES = {
+    'bulls': 3500,
+    'heifers': 3800,
+    'bonsmara': 9000,
+    'sheep': 500,
+    'hay-bales': 250
+};
+
+const LOCATION_PRICES = {
+    'Creighton': 1000,
+    'Ixopo': 1500,
+    'Pietermaritzburg': 3000,
+    'Port Shepstone': 3500,
+    'Durban': 4000,
+    'Stanger': 5000,
+    'Newcastle': 6000
+};
+
+const deliveryForm = document.getElementById('deliveryCalculatorForm');
+const deliveryEstimate = document.getElementById('deliveryEstimate');
+const estimateResult = document.getElementById('estimateResult');
+const addProductBtn = document.getElementById('addProductRow');
+const productContainer = document.getElementById('productContainer');
+
+// Enhanced Add Product Row Function
+function createProductRow() {
+    const newRow = document.createElement('div');
+    newRow.className = 'product-row';
+    newRow.innerHTML = `
+        <select class="product-select" required>
+            <option value="">Select Product</option>
+            <option value="bulls">Bulls (R3,500)</option>
+            <option value="heifers">Heifers (R3,800)</option>
+            <option value="bonsmara">Bonsmara Heifers (R9,000)</option>
+            <option value="sheep">Sheep (R500)</option>
+            <option value="hay-bales">Hay Bales (R250)</option>
+        </select>
+        <input type="number" class="product-quantity" placeholder="Qty" min="1" max="50" required>
+        <button type="button" class="remove-product-row">✖</button>
+    `;
+
+    // Remove row functionality
+    const removeButton = newRow.querySelector('.remove-product-row');
+    removeButton.addEventListener('click', () => {
+        productContainer.removeChild(newRow);
+    });
+
+    return newRow;
+}
+
+// Add Product Row Event Listener
+addProductBtn.addEventListener('click', () => {
+    const newRow = createProductRow();
+    productContainer.appendChild(newRow);
+});
+
+// Comprehensive Delivery Estimate Calculation
+deliveryForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const location = document.getElementById('deliveryLocation').value;
+    if (!location) {
+        alert('Please select a delivery location');
+        return;
+    }
+
+    const productRows = document.querySelectorAll('.product-row');
+    if (productRows.length === 0) {
+        alert('Please add at least one product');
+        return;
+    }
+
+    let isValid = true;
+    let totalEstimate = LOCATION_PRICES[location];
+    let subtotalEstimate = 0;
+
+    let estimateHTML = `
+        <div class="estimate-summary">
+            <table style="width:100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left; padding:8px; border-bottom:1px solid #eee;">Product</th>
+                        <th style="text-align:center; padding:8px; border-bottom:1px solid #eee;">Quantity</th>
+                        <th style="text-align:right; padding:8px; border-bottom:1px solid #eee;">Price</th>
+                        <th style="text-align:right; padding:8px; border-bottom:1px solid #eee;">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+    `;
+
+    productRows.forEach(row => {
+        const productSelect = row.querySelector('.product-select');
+        const quantityInput = row.querySelector('.product-quantity');
+
+        if (!productSelect.value || !quantityInput.value) {
+            isValid = false;
+            return;
+        }
+
+        const productPrice = PRODUCT_PRICES[productSelect.value];
+        const quantity = parseInt(quantityInput.value);
+        const subtotal = productPrice * quantity;
+        subtotalEstimate += subtotal;
+
+        estimateHTML += `
+            <tr>
+                <td style="padding:8px; border-bottom:1px solid #eee;">${productSelect.options[productSelect.selectedIndex].text.split(' (')[0]}</td>
+                <td style="text-align:center; padding:8px; border-bottom:1px solid #eee;">${quantity}</td>
+                <td style="text-align:right; padding:8px; border-bottom:1px solid #eee;">R${productPrice.toLocaleString()}</td>
+                <td style="text-align:right; padding:8px; border-bottom:1px solid #eee;">R${subtotal.toLocaleString()}</td>
+            </tr>
+        `;
+    });
+
+    if (!isValid) {
+        alert('Please fill in all product fields correctly');
+        return;
+    }
+
+    totalEstimate += subtotalEstimate;
+
+    estimateHTML += `
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" style="text-align:right; padding:8px; font-weight:bold;">Subtotal</td>
+                        <td style="text-align:right; padding:8px;">R${subtotalEstimate.toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align:right; padding:8px; font-weight:bold;">Delivery Fee</td>
+                        <td style="text-align:right; padding:8px;">R${LOCATION_PRICES[location].toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align:right; padding:8px; font-weight:bold; font-size:1.2em;">Total Estimate</td>
+                        <td style="text-align:right; padding:8px; font-weight:bold; font-size:1.2em;">R${totalEstimate.toLocaleString()}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    `;
+
+    estimateResult.innerHTML = estimateHTML;
+    deliveryEstimate.style.display = 'block';
+
+    // Scroll to estimate
+    deliveryEstimate.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Copy Quote Functionality
+document.getElementById('copyQuote').addEventListener('click', function() {
+    const estimateText = document.querySelector('.estimate-summary').innerText;
+
+    navigator.clipboard.writeText(estimateText).then(() => {
+        alert('Quote copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+        alert('Failed to copy quote. Please try again.');
+    });
+});
+
+// Email Quote Functionality
+document.getElementById('emailQuote').addEventListener('click', function() {
+    const estimateText = document.querySelector('.estimate-summary').innerText;
+    const subject = 'Ellington Farm Delivery Estimate';
+    const body = `Dear Ellington Farm,\n\nI would like to inquire about the following delivery estimate:\n\n${estimateText}\n\nKind regards,\n[Your Name]`;
+
+    window.location.href = `mailto:info@ellingtonfarm.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+</script>
