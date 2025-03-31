@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | Ellington Farm</title>
+    <meta name="description" content="Terms and conditions for Ellington Farm livestock sales and services.">
+    <style>
+        /* Use all the same styles from your main page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .logo span {
+            color: #F2C94C;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #F2C94C;
+        }
+
+        .nav-links a.active {
+            color: #F2C94C;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #F2C94C;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Terms Content Styles */
+        .terms-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .terms-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .terms-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .terms-section {
+            margin-bottom: 30px;
+        }
+
+        .terms-section h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #F2C94C;
+        }
+
+        .terms-section h3 {
+            font-size: 1.2rem;
+            margin: 20px 0 10px;
+            color: #555;
+        }
+
+        .terms-section p,
+        .terms-section ul {
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .terms-section ul {
+            padding-left: 20px;
+        }
+
+        .terms-section li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer - same as main page */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: #F2C94C;
+        }
+
+        .footer-about p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #F2C94C;
+            color: #333;
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #F2C94C;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #aaa;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .terms-content {
+                padding: 25px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/309347711_401127105503918_7622046856155154688_n.jpg" alt="Ellington Farm Logo" loading="lazy">
+                <span>Ellington Farm</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html" class="active">Terms</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </header>
+
+    <!-- Terms Content -->
+    <main class="terms-container">
+        <div class="terms-header">
+            <h1>Terms and Conditions</h1>
+            <p>Last updated: January 2024</p>
+        </div>
+
+        <div class="terms-content">
+            <div class="terms-section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to Ellington Farm ("we," "our," or "us"). These terms and conditions outline the rules and regulations for the use of our livestock sales and services.</p>
+                <p>By engaging with our farm for purchases, deliveries, or services, you accept these terms and conditions in full.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>2. Livestock Sales</h2>
+
+                <h3>2.1 Animal Health</h3>
+                <p>All animals are sold with a veterinary health certificate issued within 14 days of sale. However:</p>
+                <ul>
+                    <li>We cannot guarantee against latent or incubating diseases</li>
+                    <li>Purchasers are encouraged to have animals examined by their own veterinarian prior to purchase</li>
+                    <li>All sales are final unless otherwise agreed in writing</li>
+                </ul>
+
+                <h3>2.2 Pricing and Payment</h3>
+                <ul>
+                    <li>Prices are subject to change without notice</li>
+                    <li>A 30% deposit is required to reserve animals</li>
+                    <li>Full payment must be received before animals are released or delivered</li>
+                    <li>We accept bank transfers and cash payments only</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>3. Delivery Services</h2>
+
+                <h3>3.1 Delivery Terms</h3>
+                <ul>
+                    <li>Delivery costs are calculated based on distance and vehicle requirements</li>
+                    <li>Delivery dates are estimates only and subject to weather and road conditions</li>
+                    <li>We reserve the right to refuse delivery to locations we deem unsafe</li>
+                </ul>
+
+                <h3>3.2 Animal Welfare During Transport</h3>
+                <p>We adhere to all South African animal welfare regulations during transport:</p>
+                <ul>
+                    <li>Animals will be transported in approved vehicles</li>
+                    <li>Maximum journey times will not exceed 8 hours without rest</li>
+                    <li>Animals will have access to water before and after transport</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>4. Risk and Ownership</h2>
+                <ul>
+                    <li>Risk passes to the buyer at the time of loading animals for transport</li>
+                    <li>Ownership remains with Ellington Farm until full payment is received</li>
+                    <li>Buyers must ensure they have appropriate facilities to receive animals</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>5. Returns and Refunds</h2>
+                <p>Due to the nature of livestock sales:</p>
+                <ul>
+                    <li>No returns are accepted except as required by law</li>
+                    <li>Refunds may be considered at our sole discretion in cases of provable misrepresentation</li>
+                    <li>Any refunds issued will be less any costs incurred by Ellington Farm</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>6. Limitation of Liability</h2>
+                <p>Ellington Farm shall not be liable for:</p>
+                <ul>
+                    <li>Any consequential losses arising from livestock purchases</li>
+                    <li>Losses due to circumstances beyond our reasonable control (force majeure)</li>
+                    <li>Any amount exceeding the purchase price of the animals in question</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>7. Governing Law</h2>
+                <p>These terms shall be governed by and construed in accordance with the laws of South Africa. Any disputes shall be subject to the exclusive jurisdiction of the courts of KwaZulu-Natal.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>8. Changes to Terms</h2>
+                <p>We reserve the right to modify these terms at any time. The current version will always be available on our website.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">Ellington <span>Farm</span></div>
+                <p>Premium livestock farm specializing in quality beef cattle and sheep with delivery services available throughout KwaZulu-Natal.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="terms.html">Terms and Conditions</a></li>
+                    <li><a href="privacy.html">Privacy policy</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Livestock</h4>
+                <ul>
+                    <li><a href="index.html#products">Beef Cattle</a></li>
+                    <li><a href="index.html#products">Weaned Calves</a></li>
+                    <li><a href="index.html#products">Sheep</a></li>
+                    <li><a href="index.html#delivery-calculator">Transport Services</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Ellington Farm. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (same as main page)
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

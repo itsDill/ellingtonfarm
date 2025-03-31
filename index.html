@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ellington Farm | Cattle & Sheep Sales | Creighton, KZN</title>
     <meta name="description" content="Ellington Farm in Creighton, KZN offers premium beef cattle and sheep with delivery services available. Quality livestock direct from our South African farm.">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="ellington farm, cattle sales, sheep sales, livestock KZN, farm creighton, beef cattle, sheep breeds, livestock delivery">
     <meta name="geo.region" content="SA">
     <meta name="geo.placename" content="South Africa">
     <style>
@@ -51,15 +51,15 @@
         }
 
         .logo img {
-            width: 50px;  /* Adjust size as needed */
-            height: 50px; /* Maintain aspect ratio */
-            border-radius: 50%; /* Optional: make logo circular */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             margin-right: 15px;
-            object-fit: cover; /* Ensures image fills without distortion */
+            object-fit: cover;
         }
 
         .logo span {
-            color: #F2C94C; /* Optional: keep yellow accent if desired */
+            color: #F2C94C;
         }
 
         .nav-links {
@@ -77,14 +77,15 @@
             font-weight: 500;
             position: relative;
             padding-bottom: 5px;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #F2C94C; /* Yellow accent color */
+            color: #F2C94C;
         }
 
         .nav-links a.active {
-            color: #F2C94C; /* Yellow accent color */
+            color: #F2C94C;
         }
 
         .nav-links a.active::after {
@@ -94,12 +95,14 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background-color: #F2C94C; /* Yellow accent color */
+            background-color: #F2C94C;
+            transition: all 0.3s ease;
         }
 
         .hamburger {
             display: none;
             cursor: pointer;
+            font-size: 1.5rem;
         }
 
         /* Hero section */
@@ -132,7 +135,7 @@
 
         .cta-button {
             display: inline-block;
-            background-color: #F2C94C; /* Yellow accent color */
+            background-color: #F2C94C;
             color: #333;
             padding: 12px 30px;
             border-radius: 5px;
@@ -141,12 +144,19 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
+            animation: pulse 2s infinite;
         }
 
         .cta-button:hover {
             background-color: #e6b93b;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         /* Features section */
@@ -174,7 +184,7 @@
         }
 
         .feature-icon {
-            background-color: rgba(242, 201, 76, 0.2); /* Light yellow */
+            background-color: rgba(242, 201, 76, 0.2);
             width: 80px;
             height: 80px;
             border-radius: 50%;
@@ -182,7 +192,7 @@
             justify-content: center;
             align-items: center;
             margin: 0 auto 20px;
-            color: #F2C94C; /* Yellow accent color */
+            color: #F2C94C;
             font-size: 2rem;
         }
 
@@ -220,11 +230,11 @@
             justify-content: center;
             margin-bottom: 40px;
             flex-wrap: wrap;
+            gap: 10px;
         }
 
         .tab-button {
             padding: 12px 25px;
-            margin: 5px;
             background-color: #fff;
             border: none;
             border-radius: 5px;
@@ -234,7 +244,7 @@
         }
 
         .tab-button.active {
-            background-color: #F2C94C; /* Yellow accent color */
+            background-color: #F2C94C;
             color: #333;
         }
 
@@ -253,6 +263,9 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .product-card:hover {
@@ -268,6 +281,7 @@
 
         .product-info {
             padding: 20px;
+            flex-grow: 1;
         }
 
         .product-info h3 {
@@ -283,7 +297,7 @@
         .product-button {
             display: inline-block;
             padding: 8px 20px;
-            background-color: #F2C94C; /* Yellow accent color */
+            background-color: #F2C94C;
             color: #333;
             text-decoration: none;
             border-radius: 5px;
@@ -314,36 +328,34 @@
             margin-top: 30px;
         }
 
-        #deliveryEstimate {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: rgba(242, 201, 76, 0.1);
-            border-left: 4px solid #F2C94C;
-            display: none;
-        }
-
-        #deliveryEstimate h3 {
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        /* Product row styles for calculator */
         .product-row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            gap: 10px;
-        }
+    display: grid;
+    grid-template-columns: 1fr 100px 40px;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
-        .product-row select, .product-row input {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            flex-grow: 1;
-        }
+        .product-row select,
+#deliveryLocation {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+    transition: all 0.3s ease;
+}
 
-        .product-row input {
-            max-width: 80px;
+        .product-row select:focus,
+        .product-row input:focus {
+            border-color: #F2C94C;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(242, 201, 76, 0.2);
         }
 
         .remove-product-row {
@@ -353,13 +365,60 @@
             cursor: pointer;
             font-size: 1.2rem;
             padding: 5px;
+            text-align: center;
         }
 
-        /* Quote actions */
+        #deliveryEstimate {
+            padding: 30px;
+            margin-top: 30px;
+            background-color: rgba(242, 201, 76, 0.1);
+            border-left: 4px solid #F2C94C;
+            display: none;
+            border-radius: 5px;
+        }
+
+        #deliveryEstimate h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .estimate-summary table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .estimate-summary th,
+        .estimate-summary td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .estimate-summary th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+        }
+
+        .estimate-summary tfoot td {
+            font-weight: bold;
+        }
+
+        .quote-disclaimer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .quote-disclaimer ul {
+            margin: 10px 0 20px 20px;
+        }
+
         .quote-actions {
             display: flex;
             gap: 10px;
             margin-top: 20px;
+            justify-content: flex-end;
         }
 
         .quote-actions button {
@@ -368,6 +427,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: 500;
+            transition: all 0.3s ease;
         }
 
         #copyQuote {
@@ -412,13 +472,13 @@
         .contact-icon {
             width: 40px;
             height: 40px;
-            background-color: rgba(242, 201, 76, 0.2); /* Light yellow */
+            background-color: rgba(242, 201, 76, 0.2);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-right: 15px;
-            color: #F2C94C; /* Yellow accent color */
+            color: #F2C94C;
         }
 
         .contact-detail p {
@@ -456,6 +516,15 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #F2C94C;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(242, 201, 76, 0.2);
         }
 
         .form-group textarea {
@@ -466,7 +535,7 @@
         .submit-button {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #F2C94C; /* Yellow accent color */
+            background-color: #F2C94C;
             color: #333;
             border: none;
             border-radius: 5px;
@@ -479,6 +548,42 @@
 
         .submit-button:hover {
             background-color: #e6b93b;
+        }
+
+        /* Loading state */
+        .loading {
+            position: relative;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.7);
+            z-index: 1;
+        }
+
+        .loading::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 3px solid #F2C94C;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            z-index: 2;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
         /* Footer */
@@ -505,7 +610,7 @@
         }
 
         .footer-logo span {
-            color: #F2C94C; /* Yellow accent color */
+            color: #F2C94C;
         }
 
         .footer-about p {
@@ -532,7 +637,7 @@
         }
 
         .social-links a:hover {
-            background-color: #F2C94C; /* Yellow accent color */
+            background-color: #F2C94C;
             color: #333;
             transform: translateY(-3px);
         }
@@ -557,7 +662,7 @@
         }
 
         .footer-links a:hover {
-            color: #F2C94C; /* Yellow accent color */
+            color: #F2C94C;
         }
 
         .copyright {
@@ -572,7 +677,6 @@
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
-                font-size: 1.5rem;
             }
 
             .nav-links {
@@ -601,31 +705,21 @@
                 font-size: 2.5rem;
             }
 
-            .about {
+            .product-row {
                 grid-template-columns: 1fr;
             }
 
-            .about-image {
-                height: 300px;
+            .product-row input {
+                width: 100%;
             }
 
             .product-tabs {
                 flex-direction: column;
-                align-items: center;
-            }
-
-            .tab-button {
-                width: 80%;
-                margin: 5px 0;
-            }
-
-            .product-row {
-                flex-direction: column;
                 align-items: stretch;
             }
 
-            .product-row input {
-                max-width: 100%;
+            .tab-button {
+                width: 100%;
             }
         }
     </style>
@@ -636,9 +730,9 @@
     <header>
         <div class="navbar">
             <a href="index.html" class="logo">
-    <img src="images/309347711_401127105503918_7622046856155154688_n.jpg" alt="Ellington Farm Logo" loading="lazy">
-    <span>Ellington Farm</span>
-</a>
+                <img src="images/309347711_401127105503918_7622046856155154688_n.jpg" alt="Ellington Farm Logo" loading="lazy">
+                <span>Ellington Farm</span>
+            </a>
 
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
@@ -703,7 +797,6 @@
                 <div class="product-info">
                     <h3>Nguni Cattle</h3>
                     <p>Hardy and adaptable, Herefords produce excellent beef with good feed conversion efficiency.</p>
-                    <a href="#quote" class="product-button">Request Quote</a>
                 </div>
             </div>
             <div class="product-card" data-category="cattle">
@@ -734,7 +827,6 @@
                 <div class="product-info">
                     <h3>Dorper Sheep</h3>
                     <p>Excellent meat sheep known for their hardiness and high-quality meat production.</p>
-                    <a href="#quote" class="product-button">Request Quote</a>
                 </div>
             </div>
 
@@ -744,7 +836,6 @@
                 <div class="product-info">
                     <h3>Hay</h3>
                     <p>High-protein hay perfect for dairy cattle, horses, and other livestock requiring quality forage.</p>
-                    <a href="#quote" class="product-button">Request Quote</a>
                 </div>
             </div>
             <div class="product-card" data-category="hay" style="display: none;">
@@ -752,7 +843,6 @@
                 <div class="product-info">
                     <h3>Mini Hay</h3>
                     <p>Excellent quality hay with good nutritional value, suitable for all livestock.</p>
-                    <a href="#quote" class="product-button">Request Quote</a>
                 </div>
             </div>
 
@@ -760,14 +850,14 @@
             <div class="product-card" data-category="transport" style="display: none;">
                 <div class="product-image" style="background-image: url('images/470154399_1095992775307407_4056095284902481240_n (1).jpg')"></div>
                 <div class="product-info">
-                    <h3>Livestock Transport</h3>
+                    <h3>Livestock Transport (5-10)</h3>
                     <p>Professional livestock transportation services with specialized vehicles for animal safety.</p>
                 </div>
             </div>
             <div class="product-card" data-category="transport" style="display: none;">
                 <div class="product-image" style="background-image: url('images/482240660_962272706056019_4305608556234607063_n.jpg')"></div>
                 <div class="product-info">
-                    <h3>Livestock Transport</h3>
+                    <h3>Livestock Transport (1-4)</h3>
                     <p>Professional livestock transportation services with specialized vehicles for animal safety.</p>
                 </div>
             </div>
@@ -776,43 +866,45 @@
 
     <!-- Delivery Calculator Section -->
     <section class="delivery-calculator" id="delivery-calculator">
-        <div class="section-header">
-            <h2>Delivery Price Calculator</h2>
-            <p>Estimate your delivery cost based on animal type and quantity</p>
-        </div>
-        <div class="calculator-container">
-            <form id="deliveryCalculatorForm" class="calculator-form">
-                <div id="productContainer">
-                    <div class="product-row">
-                        <select class="product-select" required>
-                            <option value="">Select Product</option>
-                            <option value="bulls">Bulls (R3,500)</option>
-                            <option value="heifers">Heifers (R3,800)</option>
-                            <option value="bonsmara">Bonsmara Heifers (R9,000)</option>
-                            <option value="sheep">Sheep (R500)</option>
-                            <option value="hay-bales">Hay Bales (R250)</option>
-                        </select>
-                        <input type="number" class="product-quantity" placeholder="Qty" min="1" max="50" required>
-                        <button type="button" class="remove-product-row">✖</button>
-                    </div>
-                </div>
-                <button type="button" id="addProductRow" class="submit-button" style="margin-top: 10px;">+ Add Another Product</button>
-
-                <div class="form-group" style="margin-top: 20px;">
-                    <label for="deliveryLocation">Delivery Location</label>
-                    <select id="deliveryLocation" required>
-                        <option value="">Select Location</option>
-                        <option value="local">Local (Creighton Area) - R1,000</option>
-                        <option value="Ixopo">Ixopo  - R1,500</option>
-                        <option value="Pietermaritzburg">Pietermaritzburg - R3,000</option>
-                        <option value="Port Shepstone">Port Shepstone - R3,500+</option>
-                        <option value="Durban">Durban - R4,000+</option>
-                        <option value="Stanger">Stanger - R5,000+</option>
-                        <option value="Newcastle">Newcastle - R6,000+</option>
+    <div class="section-header">
+        <h2>Delivery Price Calculator</h2>
+        <p>Estimate your delivery cost based on animal type and quantity</p>
+    </div>
+    <div class="calculator-container">
+        <form id="deliveryCalculatorForm" class="calculator-form">
+            <div id="productContainer">
+                <div class="product-row">
+                    <select class="product-select" required>
+                        <option value="">Select Product</option>
+                        <option value="bulls">Bulls (R3,500)</option>
+                        <option value="heifers">Heifers (R3,800)</option>
+                        <option value="bonsmara">Bonsmara Heifers (R9,000)</option>
+                        <option value="sheep">Sheep (R500)</option>
+                        <option value="hay-bales">Hay Bales (R250)</option>
                     </select>
+                    <input type="number" class="product-quantity" placeholder="Qty" min="1" max="50" required value="1">
+                    <button type="button" class="remove-product-row" aria-label="Remove product">✖</button>
                 </div>
-                <button type="submit" class="submit-button">Calculate Estimate</button>
-            </form>
+            </div>
+
+            <button type="button" id="addProductRow" class="submit-button">+ Add Another Product</button>
+
+            <div class="form-group">
+                <label for="deliveryLocation">Delivery Location</label>
+                <select id="deliveryLocation" required>
+                    <option value="">Select Location</option>
+                    <option value="Creighton">Local (Creighton Area) - R1,000</option>
+                    <option value="Ixopo">Ixopo - R1,500</option>
+                    <option value="Pietermaritzburg">Pietermaritzburg - R3,000</option>
+                    <option value="Port Shepstone">Port Shepstone - R3,500+</option>
+                    <option value="Durban">Durban - R4,000+</option>
+                    <option value="Stanger">Stanger - R5,000+</option>
+                    <option value="Newcastle">Newcastle - R6,000+</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-button">Calculate Estimate</button>
+        </form>
             <div id="deliveryEstimate">
                 <h3>Estimated Delivery Quote</h3>
                 <div id="estimateResult"></div>
@@ -849,11 +941,11 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">Privacy policy</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="terms.html">Terms and Conditions</a></li>
+                    <li><a href="privacy.html">Privacy policy</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -873,222 +965,235 @@
 
     <script>
         // Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
 
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-});
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
 
-// Product Grid Filtering with complete functionality
-const tabButtons = document.querySelectorAll('.tab-button');
-const productGrid = document.getElementById('productGrid');
+        // Product Grid Filtering with complete functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const productGrid = document.getElementById('productGrid');
 
-function updateProductGrid(category) {
-    const productCards = document.querySelectorAll('.product-card');
+        function updateProductGrid(category) {
+            const productCards = document.querySelectorAll('.product-card');
 
-    // Remove active class from all buttons
-    tabButtons.forEach(btn => btn.classList.remove('active'));
+            // Remove active class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
 
-    // Add active class to clicked button
-    const activeButton = Array.from(tabButtons).find(btn => btn.getAttribute('data-tab') === category);
-    if (activeButton) {
-        activeButton.classList.add('active');
-    }
+            // Add active class to clicked button
+            const activeButton = Array.from(tabButtons).find(btn => btn.getAttribute('data-tab') === category);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
 
-    // Show/hide product cards
-    productCards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        card.style.display = cardCategory === category ? 'block' : 'none';
-    });
-}
-
-// Tab button event listeners
-tabButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const category = this.getAttribute('data-tab');
-        updateProductGrid(category);
-    });
-});
-
-// Initial load with cattle products
-updateProductGrid('cattle');
-
-// Comprehensive Delivery Calculator
-const PRODUCT_PRICES = {
-    'bulls': 3500,
-    'heifers': 3800,
-    'bonsmara': 9000,
-    'sheep': 500,
-    'hay-bales': 250
-};
-
-const LOCATION_PRICES = {
-    'Creighton': 1000,
-    'Ixopo': 1500,
-    'Pietermaritzburg': 3000,
-    'Port Shepstone': 3500,
-    'Durban': 4000,
-    'Stanger': 5000,
-    'Newcastle': 6000
-};
-
-const deliveryForm = document.getElementById('deliveryCalculatorForm');
-const deliveryEstimate = document.getElementById('deliveryEstimate');
-const estimateResult = document.getElementById('estimateResult');
-const addProductBtn = document.getElementById('addProductRow');
-const productContainer = document.getElementById('productContainer');
-
-// Enhanced Add Product Row Function
-function createProductRow() {
-    const newRow = document.createElement('div');
-    newRow.className = 'product-row';
-    newRow.innerHTML = `
-        <select class="product-select" required>
-            <option value="">Select Product</option>
-            <option value="bulls">Bulls (R3,500)</option>
-            <option value="heifers">Heifers (R3,800)</option>
-            <option value="bonsmara">Bonsmara Heifers (R9,000)</option>
-            <option value="sheep">Sheep (R500)</option>
-            <option value="hay-bales">Hay Bales (R250)</option>
-        </select>
-        <input type="number" class="product-quantity" placeholder="Qty" min="1" max="50" required>
-        <button type="button" class="remove-product-row">✖</button>
-    `;
-
-    // Remove row functionality
-    const removeButton = newRow.querySelector('.remove-product-row');
-    removeButton.addEventListener('click', () => {
-        productContainer.removeChild(newRow);
-    });
-
-    return newRow;
-}
-
-// Add Product Row Event Listener
-addProductBtn.addEventListener('click', () => {
-    const newRow = createProductRow();
-    productContainer.appendChild(newRow);
-});
-
-// Comprehensive Delivery Estimate Calculation
-deliveryForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const location = document.getElementById('deliveryLocation').value;
-    if (!location) {
-        alert('Please select a delivery location');
-        return;
-    }
-
-    const productRows = document.querySelectorAll('.product-row');
-    if (productRows.length === 0) {
-        alert('Please add at least one product');
-        return;
-    }
-
-    let isValid = true;
-    let totalEstimate = LOCATION_PRICES[location];
-    let subtotalEstimate = 0;
-
-    let estimateHTML = `
-        <div class="estimate-summary">
-            <table style="width:100%; border-collapse: collapse;">
-                <thead>
-                    <tr>
-                        <th style="text-align:left; padding:8px; border-bottom:1px solid #eee;">Product</th>
-                        <th style="text-align:center; padding:8px; border-bottom:1px solid #eee;">Quantity</th>
-                        <th style="text-align:right; padding:8px; border-bottom:1px solid #eee;">Price</th>
-                        <th style="text-align:right; padding:8px; border-bottom:1px solid #eee;">Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-    `;
-
-    productRows.forEach(row => {
-        const productSelect = row.querySelector('.product-select');
-        const quantityInput = row.querySelector('.product-quantity');
-
-        if (!productSelect.value || !quantityInput.value) {
-            isValid = false;
-            return;
+            // Show/hide product cards
+            productCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                card.style.display = cardCategory === category ? 'block' : 'none';
+            });
         }
 
-        const productPrice = PRODUCT_PRICES[productSelect.value];
-        const quantity = parseInt(quantityInput.value);
-        const subtotal = productPrice * quantity;
-        subtotalEstimate += subtotal;
+        // Tab button event listeners
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-tab');
+                updateProductGrid(category);
+            });
+        });
 
-        estimateHTML += `
-            <tr>
-                <td style="padding:8px; border-bottom:1px solid #eee;">${productSelect.options[productSelect.selectedIndex].text.split(' (')[0]}</td>
-                <td style="text-align:center; padding:8px; border-bottom:1px solid #eee;">${quantity}</td>
-                <td style="text-align:right; padding:8px; border-bottom:1px solid #eee;">R${productPrice.toLocaleString()}</td>
-                <td style="text-align:right; padding:8px; border-bottom:1px solid #eee;">R${subtotal.toLocaleString()}</td>
-            </tr>
-        `;
-    });
+        // Initial load with cattle products
+        updateProductGrid('cattle');
 
-    if (!isValid) {
-        alert('Please fill in all product fields correctly');
-        return;
-    }
+        // Comprehensive Delivery Calculator
+        const PRODUCT_PRICES = {
+            'bulls': 3500,
+            'heifers': 3800,
+            'bonsmara': 9000,
+            'sheep': 500,
+            'hay-bales': 250
+        };
 
-    totalEstimate += subtotalEstimate;
+        const LOCATION_PRICES = {
+            'Creighton': 1000,
+            'Ixopo': 1500,
+            'Pietermaritzburg': 3000,
+            'Port Shepstone': 3500,
+            'Durban': 4000,
+            'Stanger': 5000,
+            'Newcastle': 6000
+        };
 
-    estimateHTML += `
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3" style="text-align:right; padding:8px; font-weight:bold;">Subtotal</td>
-                        <td style="text-align:right; padding:8px;">R${subtotalEstimate.toLocaleString()}</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" style="text-align:right; padding:8px; font-weight:bold;">Delivery Fee</td>
-                        <td style="text-align:right; padding:8px;">R${LOCATION_PRICES[location].toLocaleString()}</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" style="text-align:right; padding:8px; font-weight:bold; font-size:1.2em;">Total Estimate</td>
-                        <td style="text-align:right; padding:8px; font-weight:bold; font-size:1.2em;">R${totalEstimate.toLocaleString()}</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    `;
+        const deliveryForm = document.getElementById('deliveryCalculatorForm');
+        const deliveryEstimate = document.getElementById('deliveryEstimate');
+        const estimateResult = document.getElementById('estimateResult');
+        const addProductBtn = document.getElementById('addProductRow');
+        const productContainer = document.getElementById('productContainer');
 
-    estimateResult.innerHTML = estimateHTML;
-    deliveryEstimate.style.display = 'block';
+        // Enhanced Add Product Row Function
+        function createProductRow() {
+            const newRow = document.createElement('div');
+            newRow.className = 'product-row';
+            newRow.innerHTML = `
+                <select class="product-select" required>
+                    <option value="">Select Product</option>
+                    <option value="bulls">Bulls (R3,500)</option>
+                    <option value="heifers">Heifers (R3,800)</option>
+                    <option value="bonsmara">Bonsmara Heifers (R9,000)</option>
+                    <option value="sheep">Sheep (R500)</option>
+                    <option value="hay-bales">Hay Bales (R250)</option>
+                </select>
+                <input type="number" class="product-quantity" placeholder="Qty" min="1" max="50" required value="1">
+                <button type="button" class="remove-product-row" aria-label="Remove product">✖</button>
+            `;
 
-    // Scroll to estimate
-    deliveryEstimate.scrollIntoView({ behavior: 'smooth' });
-});
+            // Remove row functionality
+            const removeButton = newRow.querySelector('.remove-product-row');
+            removeButton.addEventListener('click', () => {
+                if (document.querySelectorAll('.product-row').length > 1) {
+                    productContainer.removeChild(newRow);
+                } else {
+                    alert('You need at least one product row');
+                }
+            });
 
-// Copy Quote Functionality
-document.getElementById('copyQuote').addEventListener('click', function() {
-    const estimateText = document.querySelector('.estimate-summary').innerText;
+            return newRow;
+        }
 
-    navigator.clipboard.writeText(estimateText).then(() => {
-        alert('Quote copied to clipboard!');
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-        alert('Failed to copy quote. Please try again.');
-    });
-});
+        // Add Product Row Event Listener
+        addProductBtn.addEventListener('click', () => {
+            const newRow = createProductRow();
+            productContainer.appendChild(newRow);
+        });
 
-// Email Quote Functionality
-document.getElementById('emailQuote').addEventListener('click', function() {
-    const estimateText = document.querySelector('.estimate-summary').innerText;
-    const subject = 'Ellington Farm Delivery Estimate';
-    const body = `Dear Ellington Farm,\n\nI would like to inquire about the following delivery estimate:\n\n${estimateText}\n\nKind regards,\n[Your Name]`;
+        // Comprehensive Delivery Estimate Calculation
+        deliveryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    window.location.href = `mailto:info@ellingtonfarm.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
+            // Add loading state
+            this.classList.add('loading');
 
-</script>
+            // Simulate processing delay
+            setTimeout(() => {
+                this.classList.remove('loading');
+
+                const location = document.getElementById('deliveryLocation').value;
+                if (!location) {
+                    alert('Please select a delivery location');
+                    return;
+                }
+
+                const productRows = document.querySelectorAll('.product-row');
+                if (productRows.length === 0) {
+                    alert('Please add at least one product');
+                    return;
+                }
+
+                let isValid = true;
+                let totalEstimate = LOCATION_PRICES[location];
+                let subtotalEstimate = 0;
+
+                let estimateHTML = `
+                    <div class="estimate-summary">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                `;
+
+                productRows.forEach(row => {
+                    const productSelect = row.querySelector('.product-select');
+                    const quantityInput = row.querySelector('.product-quantity');
+
+                    if (!productSelect.value || !quantityInput.value) {
+                        isValid = false;
+                        return;
+                    }
+
+                    const productPrice = PRODUCT_PRICES[productSelect.value];
+                    const quantity = parseInt(quantityInput.value);
+                    const subtotal = productPrice * quantity;
+                    subtotalEstimate += subtotal;
+
+                    estimateHTML += `
+                        <tr>
+                            <td>${productSelect.options[productSelect.selectedIndex].text.split(' (')[0]}</td>
+                            <td>${quantity}</td>
+                            <td>R${productPrice.toLocaleString()}</td>
+                            <td>R${subtotal.toLocaleString()}</td>
+                        </tr>
+                    `;
+                });
+
+                if (!isValid) {
+                    alert('Please fill in all product fields correctly');
+                    return;
+                }
+
+                totalEstimate += subtotalEstimate;
+
+                estimateHTML += `
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3">Subtotal</td>
+                                    <td>R${subtotalEstimate.toLocaleString()}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">Delivery Fee</td>
+                                    <td>R${LOCATION_PRICES[location].toLocaleString()}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">Total Estimate</td>
+                                    <td>R${totalEstimate.toLocaleString()}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                `;
+
+                estimateResult.innerHTML = estimateHTML;
+                deliveryEstimate.style.display = 'block';
+
+                // Scroll to estimate
+                deliveryEstimate.scrollIntoView({ behavior: 'smooth' });
+            }, 800);
+        });
+
+        // Copy Quote Functionality
+        document.getElementById('copyQuote').addEventListener('click', function() {
+            const estimateText = document.querySelector('.estimate-summary').innerText;
+
+            navigator.clipboard.writeText(estimateText).then(() => {
+                alert('Quote copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy quote. Please try again.');
+            });
+        });
+
+        // Email Quote Functionality
+        document.getElementById('emailQuote').addEventListener('click', function() {
+            const estimateText = document.querySelector('.estimate-summary').innerText;
+            const subject = 'Ellington Farm Delivery Estimate';
+            const body = `Dear Ellington Farm,\n\nI would like to inquire about the following delivery estimate:\n\n${estimateText}\n\nKind regards,\n[Your Name]`;
+
+            window.location.href = `mailto:info@ellingtonfarm.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Ellington Farm</title>
+    <meta name="description" content="Privacy policy for Ellington Farm livestock sales and services.">
+    <style>
+        /* Use all the same styles from your main page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .logo span {
+            color: #F2C94C;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #F2C94C;
+        }
+
+        .nav-links a.active {
+            color: #F2C94C;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #F2C94C;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Privacy Content Styles */
+        .privacy-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .privacy-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .privacy-section {
+            margin-bottom: 30px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #F2C94C;
+        }
+
+        .privacy-section h3 {
+            font-size: 1.2rem;
+            margin: 20px 0 10px;
+            color: #555;
+        }
+
+        .privacy-section p,
+        .privacy-section ul {
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .privacy-section ul {
+            padding-left: 20px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer - same as main page */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: #F2C94C;
+        }
+
+        .footer-about p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #F2C94C;
+            color: #333;
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #F2C94C;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #aaa;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .privacy-content {
+                padding: 25px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/309347711_401127105503918_7622046856155154688_n.jpg" alt="Ellington Farm Logo" loading="lazy">
+                <span>Ellington Farm</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html" class="active">Privacy</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </header>
+
+    <!-- Privacy Content -->
+    <main class="privacy-container">
+        <div class="privacy-header">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: January 2024</p>
+        </div>
+
+        <div class="privacy-content">
+            <div class="privacy-section">
+                <h2>1. Introduction</h2>
+                <p>Ellington Farm ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage with our livestock services.</p>
+                <p>By using our services, you agree to the collection and use of information in accordance with this policy.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>2. Information We Collect</h2>
+
+                <h3>2.1 Personal Information</h3>
+                <p>We may collect personal information that you voluntarily provide to us, including:</p>
+                <ul>
+                    <li>Name and contact details (email, phone number, address)</li>
+                    <li>Payment information for livestock purchases</li>
+                    <li>Farm or business details</li>
+                    <li>Delivery address and specifications</li>
+                </ul>
+
+                <h3>2.2 Automatically Collected Information</h3>
+                <p>When you visit our website, we may automatically collect:</p>
+                <ul>
+                    <li>IP address and browser type</li>
+                    <li>Pages visited and time spent on site</li>
+                    <li>Referring website details</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>3. How We Use Your Information</h2>
+                <p>We use the information we collect for the following purposes:</p>
+                <ul>
+                    <li>To process and fulfill livestock sales and deliveries</li>
+                    <li>To communicate with you about your orders</li>
+                    <li>To improve our website and services</li>
+                    <li>To comply with legal requirements related to livestock sales</li>
+                    <li>To send periodic emails about farm updates (only with consent)</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>4. Sharing of Information</h2>
+                <p>We may share information in the following circumstances:</p>
+                <ul>
+                    <li>With delivery services for livestock transportation</li>
+                    <li>With veterinary services as required for animal health certificates</li>
+                    <li>With payment processors to complete transactions</li>
+                    <li>When required by law or to protect our rights</li>
+                </ul>
+                <p>We do not sell your personal information to third parties.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>5. Data Security</h2>
+                <p>We implement appropriate security measures to protect your information:</p>
+                <ul>
+                    <li>Secure servers for storing customer information</li>
+                    <li>Encryption for sensitive data transmission</li>
+                    <li>Limited access to personal information</li>
+                </ul>
+                <p>However, no internet transmission is completely secure, and we cannot guarantee absolute security.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>6. Your Rights</h2>
+                <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+                <ul>
+                    <li>Access the personal data we hold about you</li>
+                    <li>Request correction of inaccurate data</li>
+                    <li>Request deletion of your data (subject to legal requirements)</li>
+                    <li>Opt-out of marketing communications</li>
+                </ul>
+                <p>To exercise these rights, please contact us using the information below.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>7. Cookies and Tracking</h2>
+                <p>Our website may use cookies to enhance your experience. You can set your browser to refuse cookies, but some features may not function properly.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>8. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy periodically. We will notify you of significant changes by posting the new policy on our website.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>9. Contact Us</h2>
+                <p>If you have questions about this Privacy Policy, please contact us:</p>
+                <ul>
+                    <li>Email: info@ellingtonfarm.co.za</li>
+                    <li>Phone: +27 XX XXX XXXX</li>
+                    <li>Address: Ellington Farm, Creighton, KwaZulu-Natal, South Africa</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">Ellington <span>Farm</span></div>
+                <p>Premium livestock farm specializing in quality beef cattle and sheep with delivery services available throughout KwaZulu-Natal.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="terms.html">Terms and Conditions</a></li>
+                    <li><a href="privacy.html">Privacy policy</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Livestock</h4>
+                <ul>
+                    <li><a href="index.html#products">Beef Cattle</a></li>
+                    <li><a href="index.html#products">Weaned Calves</a></li>
+                    <li><a href="index.html#products">Sheep</a></li>
+                    <li><a href="index.html#delivery-calculator">Transport Services</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Ellington Farm. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (same as main page)
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
