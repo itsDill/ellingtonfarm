@@ -726,6 +726,25 @@
     .estimate-summary {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: #F2C94C #f1f1f1; /* For Firefox - thumb and track colors */
+        margin-bottom: 15px; /* Add space for the scrollbar */
+        padding-bottom: 5px; /* Make room for the scrollbar */
+    }
+
+    /* Custom scrollbar styling for WebKit browsers (Chrome, Safari, newer Edge) */
+    .estimate-summary::-webkit-scrollbar {
+        height: 8px; /* Height of the scrollbar */
+    }
+
+    .estimate-summary::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Track color */
+        border-radius: 4px;
+    }
+
+    .estimate-summary::-webkit-scrollbar-thumb {
+        background: #F2C94C; /* Thumb color matching your site's theme */
+        border-radius: 4px;
     }
 
     .estimate-summary table {
