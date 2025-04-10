@@ -721,6 +721,18 @@
             .tab-button {
                 width: 100%;
             }
+            /* Add this to your existing style section */
+@media (max-width: 768px) {
+    .estimate-summary {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .estimate-summary table {
+        width: 100%;
+        min-width: 400px; /* Ensures the table doesn't compress too much */
+    }
+}
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
